@@ -14,9 +14,22 @@
     <div class="row grey">      <div class="col-sm-12">
 
       <!-- BEGIN left column: controls -->
+
       <div class="col-sm-2">
         Choose a server ID: 
         <select ng-model="MainCtrl.data.serverid" ng-options="serverid for serverid in MainCtrl.data.serverids"></select>
+      </div>
+
+      <div class="col-sm-2">
+        Pick Y height:
+        <select ng-model="MainCtrl.data.yHeight" ng-options="yHeight for yHeight in MainCtrl.data.yHeights"></select>
+      </div>
+
+      <div class ="col-sm-6">
+        <div class="row">
+          <br> Number of Days to look back: <code>{{MainCtrl.data.lookBackDay}}</code><br/>
+          <input type="range" name="range" ng-model="MainCtrl.data.lookBackDay" min="1"  max="20">
+        </div>
       </div>
 
       <!-- END left column  -->
